@@ -2,3 +2,17 @@
  Color Boton Next: #ff00ba
 Boton Google Maps: #8763ab
 Mensaje Google Maps: #490086*/
+
+#phone_button {
+    background-color: #ff00ba;
+    color: #fff;
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+    padding: 20px 0;
+    display:block;
+    text-align:center;
+    border: none;
+    position: fixed;
+    bottom: 0;
+}
