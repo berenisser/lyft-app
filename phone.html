@@ -12,48 +12,39 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
+<body id="phone">
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col s2">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                </div>
-                <div class="col s8">
-                    <h1>Sign up</h1>
-                    <p>Join now for free ride credit</p>
-                </div>
+        <div class="row">
+            <div class="col s2">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
             </div>
-                <div class="row">
-                    <div class="col s12">
-                        <hr>
-                    </div>
-                </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="input-field col s2">
-                        <select class="icons">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-                            <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-                            <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
-                        </select>
-                        
-                    </div>
-                    <div class="input-field col s10 ">
-                        <input type="number" name="phone" placeholder="123456789">
-                        <p>We'll send a text to verify your phone</p>
-                    </div>
-                </div>
+            <div class="col s8">
+                <h1 class="center-align">Sign up</h1>
+                <p class="center-align">Join now for free ride credit</p>
             </div>
+            <hr>
         </div>
+    </header>
+    <section>
         <div class="row">
             <div class="col s12">
-                <button id="phone_button">Next</button>
+                <div class="input-field col s2">
+                    <select class="icons banderitas">
+                        <option value="" disabled selected data-icon="assets/img/Chile.png" class="left circle">Chile</option>
+                        <option value="" data-icon="assets/img/Mexico.png" class="left circle">México</option>
+                        <option value="" data-icon="assets/img/Peru.png" class="left circle">Perú</option>
+                    </select>
+                </div>
+                <div class="input-field col s10">
+                    <input type="number" name="phone" placeholder="123456789">
+                </div>
+            </div>
+            <div class="col s12">
+                <p class="center-align">We'll send a text to verify your phone</p>
             </div>
         </div>
-
-    </header>
+        <button id="phone_button">Next</button>
+    </section>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->

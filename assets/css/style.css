@@ -3,7 +3,7 @@
 Boton Google Maps: #8763ab
 Mensaje Google Maps: #490086*/
 
-#phone_button {
+body#phone #phone_button {
     background-color: #ff00ba;
     color: #fff;
     width: 100%;
@@ -15,4 +15,26 @@ Mensaje Google Maps: #490086*/
     border: none;
     position: fixed;
     bottom: 0;
+}
+
+body#phone h1 {
+    font-size: 1.4rem;
+    margin: 0.7rem;
+    font-weight: 700;
+}
+body#phone p {
+    margin: 0.2rem;
+}
+
+body#phone header i {
+    font-size: 2.5rem;
+}
+
+body#phone hr {
+    width: 100%;
+}
+
+body#phone input {
+    border: 0.8px solid #9e9e9e;
+    border-radius: 3px;
 }
