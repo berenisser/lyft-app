@@ -1,4 +1,27 @@
- $(document).ready(function() {
+$(document).ready(function() {
+    /* Arreglo de objetos phone */
+    function pais (id,imagen,nombre,codigo,cantidad_digitos) {
+        this.id = id;
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.cantidad_digitos = cantidad_digitos;
+    }
+
+    var chile = new pais("chile", "assets/img/Chile.png", "Chile", "+56", 9);
+    var mexico = new pais("mexico", "assets/img/Mexico.png", "México", "+52", 10);
+    var peru = new pais("peru", "assets/img/Peru.png", "Perú", "+51", 9);
+
+    var arr_paises = [];
+    arr_paises.push(chile);
+    arr_paises.push(mexico);
+    arr_paises.push(peru);
+
+    var pais_actual = chile;
+
+    generarListadoDePaises();
+    /* FIN Arreglo de objetos phone */
+
     $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         startingTop: '4%', // Starting top style attribute
@@ -6,34 +29,20 @@
     });
 
     $("#sign-up-phone").on("keyup", "input[name=phone]", function(event) {
-        var prefijo = $("input[name=prefix-phone]").val();
-        if (prefijo == "+56") {
-            validatePhone(9);
-        } else if (prefijo == "+51") {
-            validatePhone(9);
-        } else if (prefijo == "+52") {
-            validatePhone(10);
-        }
+        validatePhone(pais_actual.cantidad_digitos);
     });
 
     $("#listado-paises").on("click", "a", function(event) {
-        var ids = $(this).attr("id");
-        if( ids == "mexico"){
-            $( "input[name=prefix-phone]" ).val( "+52" );
-            $("#sign-up-phone img").attr('src', "assets/img/Mexico.png");
-            $("#sign-up-phone input").attr('placeholder', "1234567890");
-            validatePhone(10);
-        } else if (ids == "peru") {
-            $( "input[name=prefix-phone]" ).val( "+51" );
-            $("#sign-up-phone img").attr('src', "assets/img/Peru.png");
-            $("#sign-up-phone input").attr('placeholder', "123456789");
-            validatePhone(9);
-        }else if (ids == "chile") {
-            $( "input[name=prefix-phone]" ).val( "+56" );
-            $("#sign-up-phone img").attr('src', "assets/img/Chile.png");
-            $("#sign-up-phone input").attr('placeholder', "123456789");
-            validatePhone(9);
-        }
+        var id_pais = $(this).attr("id");
+
+        $.each(arr_paises, function(index, pais){
+            if(pais.id == id_pais) {
+                $("input[name=prefix-phone]").val(pais.codigo);
+                $("#sign-up-phone img").attr('src', pais.imagen);
+                validatePhone(pais.cantidad_digitos);
+                pais_actual = pais;
+            }
+        });
     });
 
     function validatePhone(phone_size) {
@@ -47,5 +56,20 @@
             $("#phone_button").removeClass('disabled');
             $("input[name=phone]").removeClass('invalid').addClass('valid');
         }
+    }
+
+    function generarListadoDePaises() {
+        $.each(arr_paises, function(index, pais) {
+            $('<a>',{
+                'href':'#!',
+                'class': 'modal-action modal-close waves-effect btn-flat',
+                'id': pais.id,
+            }).append(
+                $('<img>',{
+                    'src': pais.imagen
+                })
+            ).appendTo('#listado-paises');
+            $("#"+pais.id).append(pais.nombre);
+        });
     }
 });
