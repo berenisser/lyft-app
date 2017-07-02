@@ -162,6 +162,18 @@ body#phone .input-field label:after {
     font-size: 2em;
 }
 
+#codigo input[type=number]{
+     border-bottom: 1px solid #ff00ba;
+}
+
+#codigo .input-field label{
+    color: #ff00ba;
+}
+
+.error-codigo{
+    color: #ff00ba;
+}
+
 /*para que el boton a ocupe 100% del ancho de pantalla*/
 .btn-verify{
     background-color: #ff00ba;

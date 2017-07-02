@@ -55,7 +55,8 @@ $(document).ready(function() {
             $("input[name=phone]").css('border-color','#0aa827');
             $("#phone_button").removeClass('disabled');
             $("input[name=phone]").removeClass('invalid').addClass('valid');
-            //funcion que al presionar boton lleva a la siguiente pagina
+
+            //funcion que al presionar boton lleva a la siguiente pagina con codigo aleatorio
             $("#phone_button").click(function() {
             var randomCode = Math.floor((Math.random()*333)+111);
             localStorage.setItem('code',randomCode);
@@ -83,5 +84,16 @@ $(document).ready(function() {
     //Imprime el codigo el + convierte el string a un numero
     var codigo = +localStorage.getItem('code');
     $('#imprimir-codigo').html(codigo); 
+
+    var userInputCode;
+    //Extrae val de codigo de verificacion
+    $("#btn-verify").click(function() {
+        userInputCode = parseInt($('#codigo-input').val());
+        if(userInputCode != codigo || userInputCode == ""){
+            $("#error-codigo").append("Invalid Code");
+        }else{
+            window.open('phone.html','_self',false);
+        }
+    });
 
 });
