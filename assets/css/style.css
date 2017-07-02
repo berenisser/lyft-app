@@ -35,6 +35,7 @@ body#phone header i {
 
 body#phone hr {
     width: 100%;
+    clear: both;
 }
 
 body#phone .input-field input, body#phone .input-field a {
