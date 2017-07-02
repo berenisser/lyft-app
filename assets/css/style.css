@@ -131,3 +131,49 @@ body#phone .input-field label:after {
     left: initial;
     right: 10px;
 }
+
+/* ..........seccion phone2.html............ */
+
+/*codigo.html*/
+#codigo h1{
+    font-size: 1.4rem;
+    margin: 0.7rem;
+    font-weight: 700;
+}
+
+#codigo hr{
+    width: 100%;
+}
+
+#codigo i{
+    font-size: 2.5rem;
+}
+
+#codigo input{
+    font-size: 2.5em;
+    width: 70px;
+}
+
+.lab{
+    font-size: 2em;
+}
+
+#codigo span{
+    font-size: 2em;
+}
+
+/*para que el boton a ocupe 100% del ancho de pantalla*/
+.btn-verify{
+    background-color: #ff00ba;
+    color: #fff;
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+    padding: 20px 0;
+    display:block;
+    text-align:center;
+    position: fixed;
+    bottom: 0;
+}
+
+/* .........FIN seccion phone2.html.......... */
