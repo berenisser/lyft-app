@@ -15,6 +15,9 @@ body#phone #phone_button {
     border: none;
     position: fixed;
     bottom: 0;
+    text-transform: capitalize;
+    height: auto;
+    font-size: 1.8rem;
 }
 
 body#phone h1 {
