@@ -2,3 +2,15 @@
  Color Boton Next: #ff00ba
 Boton Google Maps: #8763ab
 Mensaje Google Maps: #490086*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+
+}
+
+
