@@ -11,7 +11,7 @@
             validatePhone(9);
         } else if (prefijo == "+51") {
             validatePhone(9);
-        } else if (prefijo == "52") {
+        } else if (prefijo == "+52") {
             validatePhone(10);
         }
     });
@@ -22,14 +22,17 @@
             $( "input[name=prefix-phone]" ).val( "+52" );
             $("#sign-up-phone img").attr('src', "assets/img/Mexico.png");
             $("#sign-up-phone input").attr('placeholder', "1234567890");
+            validatePhone(10);
         } else if (ids == "peru") {
             $( "input[name=prefix-phone]" ).val( "+51" );
             $("#sign-up-phone img").attr('src', "assets/img/Peru.png");
             $("#sign-up-phone input").attr('placeholder', "123456789");
+            validatePhone(9);
         }else if (ids == "chile") {
             $( "input[name=prefix-phone]" ).val( "+56" );
             $("#sign-up-phone img").attr('src', "assets/img/Chile.png");
             $("#sign-up-phone input").attr('placeholder', "123456789");
+            validatePhone(9);
         }
     });
 
