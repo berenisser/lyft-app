@@ -11,28 +11,32 @@
         if (prefijo == "+56" && ($(this).val().length != 9 || isNaN($(this).val()))) {
             $(this).css('border-color','#FF0000');
             $("#phone_button").addClass('disabled');
+            $(this).removeClass('valid').addClass('invalid');
             return false;
         } else {
             $(this).css('border-color','#0aa827');
             $("#phone_button").removeClass('disabled');
-        }
-    });
-
-    $("input[name=phone]").change(function(event) {
-        var prefijo = $("input[name=prefix-phone]").val();
-
-        if (prefijo == "+56" && ($("input[name=phone]").val().length != 9 || isNaN($("input[name=phone]").val()))) {
-            Materialize.toast('Debes ingresar un número válido', 2000)
-            return false;
+            $(this).removeClass('invalid').addClass('valid');
         }
     });
 
     $("#listado-paises a").click(function(event) {
         var ids = $(this).attr("id");
-        console.log(ids);
-        if( ids == $("#mexico")){
-            $( "input[name=prefix-phone]" ).replaceWith( "OK" );
-            console.log("si cumpli");
+        if( ids == "mexico"){
+            $( "input[name=prefix-phone]" ).val( "+52" );
+            $("#sign-up-phone img").attr('src', "assets/img/Mexico.png");
+            $("#sign-up-phone input").attr('placeholder', "1234567890");
+            var prefijo = $("input[name=prefix-phone]").val();
+
+            if (prefijo == "+52" && ($(this).val().length != 10 || isNaN($(this).val()))) {
+                $(this).css('border-color','#FF0000');
+                $("#phone_button").addClass('disabled');
+                return false;
+            } else {
+                $(this).css('border-color','#0aa827');
+                $("#phone_button").removeClass('disabled');
+            }
+
         }
     });
 });
