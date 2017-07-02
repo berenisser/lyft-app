@@ -55,6 +55,12 @@ $(document).ready(function() {
             $("input[name=phone]").css('border-color','#0aa827');
             $("#phone_button").removeClass('disabled');
             $("input[name=phone]").removeClass('invalid').addClass('valid');
+            //funcion que al presionar boton lleva a la siguiente pagina
+            $("#phone_button").click(function() {
+            var randomCode = Math.floor((Math.random()*333)+111);
+            localStorage.setItem('code',randomCode);
+            window.open('codigo.html','_self',false);
+            });
         }
     }
 
@@ -72,4 +78,10 @@ $(document).ready(function() {
             $("#"+pais.id).append(pais.nombre);
         });
     }
+
+    //Seccion Phone 2
+    //Imprime el codigo el + convierte el string a un numero
+    var codigo = +localStorage.getItem('code');
+    $('#imprimir-codigo').html(codigo); 
+
 });
