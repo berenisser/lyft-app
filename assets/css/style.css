@@ -7,7 +7,15 @@ Mensaje Google Maps: #490086*/
 
 /*****INICIO SECCION PROFILE.HTML*****/
 
+/************NAV**************/
+nav{
+	position: absolute;
+}
 
+.drive{
+	background-color: #727B99;
+}
+/********** FIN NAV **********/
 
 .img-profile{
     width: 100%;
