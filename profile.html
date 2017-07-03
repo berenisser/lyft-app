@@ -16,7 +16,8 @@
 </head>
 <body>
     <section class="profile-foto">
-        <div class="imagen">
+        <div class="imagen row">
+          <div class="col s12">
             <form action="#" class="imagen-cambio">
                 <div class="file-field input-field">
                      <div class="btn">
@@ -28,13 +29,16 @@
             <div id="cambio">
                 <img class="img-profile" src="assets/img/profile.jpg" alt="perfil">
             </div> 
+          </div>
         </div>
     </section>
+
     <section class="profile-info">
         <div class="container">        
             <div class="row">
                 <div class="col s8 offset-s2 name-profile">
-                    <div class="Nombre">NOMBRE USUARIO</div>
+                    <!-- Aqui se escribira el nombre -->
+                    <div class="Nombre" id="espacio-nombre"></div>
                     <h6 class="h6-profile">JOINED SEPTEMBER 2017</h6 class="h6-profile">
                 </div>
             </div>
@@ -77,6 +81,18 @@
                                <button class="btn btn-input btn-profile btn-cancel">Cancel</button>
                             </div>
                         </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">email</i>
+                               <span class="correoP" id="perfil-correo"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">phone</i>
+                               <span class="fonoP" id="perfil-fono"></span>
+                            </div>
+                        </li>
                     <!-- <li><i class="fa fa-home" aria-hidden="true"></i> From the best city ever</li>
                        <li><i class="fa fa-music" aria-hidden="true"></i> Favorite music is whatever matches my mood</li>
                        <li><i class="fa fa-user" aria-hidden="true"></i> I'm going places</li>-->
@@ -85,6 +101,7 @@
             </div>
         </div>
     </section>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->

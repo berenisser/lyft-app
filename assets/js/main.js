@@ -1,8 +1,5 @@
  $(document).ready(function(){
- 	//COLLAPSE
-    $('.collapsible').collapsible();
-
-     //EDIT
+    //EDIT
     //INPUT1
     $('a.btn-enlace1').click(function() {
     	$('.input1').show(400);
@@ -47,32 +44,42 @@
         	    $('.place-profile').val("");
         }
     })
+
+    //Seccion de imprimir el nombre guardado en localStorage
+    /*var nom = localStorage.getItem('nombres').toUpperCase();
+    $('#espacio-nombre').html(nom);
+
+    $("#perfil-correo").html();
+    $("#perfil-fono").html();*/
+
+    $(document).ready(function(){
+        $('#files').on('click', function(){
+
+            $('#files').change(function(){
+
+             var reader = new FileReader();
+
+                reader.onload = function(file){
+
+                    var fileContent = file.target.result;
+
+                     //creamos img y guardamos en localStorage
+                    var fotico = '<img width="100%" src="' + fileContent + '">';
+                    localStorage.setItem('foto',fotico);
+
+                    var fotoStorage = localStorage.getItem('foto');
+                    $("#cambio").html(fotoStorage);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+
+            });
+       });
+    });
+
 });
 
- //CAMBIO DE IMAGEN CON JAVASCRIPT
-function archivo(evt) {
-      var files = evt.target.files;
-       
-        //Obtenemos la imagen del campo "file". 
-      for (var i = 0, f; f = files[i]; i++) {         
-           //Solo admitimos imágenes.
-           if (!f.type.match('image.*')) {
-                continue;
-           }
-       
-           var reader = new FileReader();
-           
-           reader.onload = (function(theFile) {
-               return function(e) {
-               // Creamos la imagen.
-                      document.getElementById("cambio").innerHTML = ['<img width="100%" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-               };
-           })(f);
- 
-           reader.readAsDataURL(f);
-       };
-};    
-      document.getElementById('files').addEventListener('change', archivo, false);
 
+  
+     
 
-      
