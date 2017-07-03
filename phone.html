@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <!--zoom desde mobile-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--typografia-->
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body id="phone">
+    <header>
+        <div class="row">
+            <div class="col s2">
+                <a href="index.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            </div>
+            <div class="col s8">
+                <h1 class="center-align">Sign up</h1>
+                <p class="center-align">Join now for free ride credit</p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <section>
+        <div class="row">
+            <div id="sign-up-phone" class="col s12">
+                <div class="input-field col s2 valign-wrapper">
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn-flat" href="#pais"><img src="assets/img/Chile.png"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                </div>
+                <div class="input-field col s2">
+                    <input type="text" name="prefix-phone" value="+56" disabled>
+                </div>
+                <div class="input-field col s8">
+                    <input type="number" name="phone" placeholder="Ingrese su número de teléfono">
+                    <label for="phone" data-error="Debes ingresar un número valido" data-success="OK!"></label>
+                </div>
+            </div>
+            <div class="col s12">
+                <p class="center-align">We'll send a text to verify your phone</p>
+            </div>
+            <!-- Modal Structure -->
+            <div id="pais" class="modal bottom-sheet">
+                <div>
+                    <h4 class="center-align">Select Country <a id="cerrar-modal" href="#!" class="modal-action modal-close waves-effect btn-flat">Close</a></h4>
+                    <hr>
+                    <p>Common countries</p>
+                    <div class="container" id="listado-paises">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="phone_button" class="btn disabled">Next</button>
+    </section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <!-- Iconos -->
+    <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+    <!-- Archivo main.js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
