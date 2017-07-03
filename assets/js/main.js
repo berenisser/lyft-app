@@ -1,4 +1,7 @@
  $(document).ready(function(){
+    $(".button-collapse").sideNav();
+
+
     //EDIT
     //INPUT1
     $('a.btn-enlace1').click(function() {
