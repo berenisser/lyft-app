@@ -56,11 +56,13 @@ $(document).ready(function() {
             $("#phone_button").removeClass('disabled');
             $("input[name=phone]").removeClass('invalid').addClass('valid');
 
+            //guardamos el numero de telefono a localStorage
+            localStorage.setItem('phone',$("input[name=phone]").val());
             //funcion que al presionar boton lleva a la siguiente pagina con codigo aleatorio
             $("#phone_button").click(function() {
-            var randomCode = Math.floor((Math.random()*333)+111);
-            localStorage.setItem('code',randomCode);
-            window.open('codigo.html','_self',false);
+                var randomCode = Math.floor((Math.random()*333)+111);
+                localStorage.setItem('code',randomCode);
+                window.open('codigo.html','_self',false);
             });
         }
     }
@@ -84,16 +86,26 @@ $(document).ready(function() {
     //Imprime el codigo el + convierte el string a un numero
     var codigo = +localStorage.getItem('code');
     $('#imprimir-codigo').html(codigo); 
-
-    var userInputCode;
+    
+    
     //Extrae val de codigo de verificacion
-    $("#btn-verify").click(function() {
-        userInputCode = parseInt($('#codigo-input').val());
-        if(userInputCode != codigo || userInputCode == ""){
-            $("#error-codigo").append("Invalid Code");
+    paraf = $("<p id='error-codigo'>Invalid Code</p>"); //Si lo incluyo dentro del if remove no lo reconoce
+    $("#btn-padre").on("click", $("#btn-verify"), function(e) {
+        e.preventDefault();
+        paraf.remove();
+        if($('#codigo-input').val() != codigo || $('#codigo-input').val() == ""){
+            //paraf = $("<p id='error-codigo'>Invalid Code</p>");
+            $("#error-codigo").append(paraf);
+            $('#codigo-input').val("");
+            console.log($('#codigo-input').val());
+            //alert("Noooooo");
+            return false;
         }else{
+            //location.href = 'phone.html';
             window.open('phone.html','_self',false);
         }
     });
 
 });
+
+ 

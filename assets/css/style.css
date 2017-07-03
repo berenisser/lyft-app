@@ -171,7 +171,7 @@ body#phone .input-field label:after {
 }
 
 .error-codigo{
-    color: #ff00ba;
+    color: red;
 }
 
 /*para que el boton a ocupe 100% del ancho de pantalla*/
