@@ -306,6 +306,7 @@ $(document).ready(function() {
     var nom = localStorage.getItem('name');
     $('#espacio-nombre-profile').html(nom);
     $("#espacio-nombre-modal").html(nom);
+    $("#espacio-nombre-modal-mapa").html(nom);
     //Seccion obtener e imprimir correo y numero de telefono
     var correoElec = localStorage.getItem('email');
     var fonoProfile = localStorage.getItem('phone');
@@ -359,7 +360,7 @@ $(document).ready(function(){
         var nameValue = $("#nombre-signup").val();
         console.log(nameValue);
         if (!(/^[A-Z][a-z]{3,19}$/).test(nameValue)){
-            $("#espacio-error-nombre").append('<p class="red">Invalid name </p>');
+            $("#espacio-error-nombre").append('<p class="red">Invalid name. First letter must be capitalized</p>');
             $("#nombre-signup").val("");
             console.log("primera");
             return false;
