@@ -3,7 +3,7 @@
 Boton Google Maps: #8763ab
 Mensaje Google Maps: #490086*/
 
-
+/********* MAP **********/
 *{
   margin: 0;
   padding: 0;
@@ -14,7 +14,15 @@ body{
 }
 
 /*inicio css map*/
+/************NAV**************/
+nav{
+  position: absolute;
+}
 
+.drive{
+  background-color: #727B99;
+}
+/********** FIN NAV **********/
 #logo{
   width: 60px;
   position: absolute;
