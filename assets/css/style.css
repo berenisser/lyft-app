@@ -3,33 +3,47 @@
 Boton Google Maps: #8763ab
 Mensaje Google Maps: #490086*/
 
-/******Inicio seccion sing up******/
-.fondo{
-    font-size: 1rem;
+
+/*...........index.html.............*/
+
+#intro{
+    background-image: url("../img/lyft-photo-oscura.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.logo-white{
+    width: 100%;
+    margin-top: 30%;
+}
+
+#intro .boton-vacio{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    min-width: 170px;
     width: 100%;
 }
 
-.logo{
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-top: -50%;
+#intro .boton-inicio{
+    border-radius: 5px;
+    min-width: 170px;
+    width: 100%;
+    background-color: #ff00ba;
+    background: -webkit-linear-gradient(left, #4f0083 , #ff00ba); 
+    background: -o-linear-gradient(right, #4f0083, #ff00ba); 
+    background: -moz-linear-gradient(right, #4f0083, #ff00ba); 
+    background: linear-gradient(to right, #4f0083 , #ff00ba);
 }
 
-.waves-effect{
-    background-color: transparent;
-    border: solid 1px white;
+.botones-intro{
+    position: fixed;
+    bottom: 0;
+}
 
-}
-.boton{
-    background-color: #E31FB3;
-    border: transparent;
-    margin-left:1em;
-    margin: 10px;
-    
-}
+/*...........FIN..index.html.............*/
+
 
 
 /*****INICIO SECCION PROFILE.HTML*****/

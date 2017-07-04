@@ -103,7 +103,7 @@ $(document).ready(function() {
             return false;
         }else{
             //location.href = 'phone.html';
-            window.open('phone.html','_self',false);
+            window.open('datos.html','_self',false);
         }
     });
   
