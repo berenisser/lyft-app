@@ -272,3 +272,18 @@ body#phone .input-field label:after {
 
 /* .........FIN seccion phone2.html.......... */
 
+#btn{
+    background-color: #ff00ba ;
+    color: #fff;
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+    padding: 20px 0;
+    display:block;
+    text-align:center;
+    position: fixed;
+    bottom: 0;
+    text-transform: capitalize;
+    height: auto;
+    font-size: 1.8rem;
+}
