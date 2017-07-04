@@ -2,89 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <!--zoom desde mobile-->
+    <title>Lyft App</title>
+        <!--zoom desde mobile-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!---->
-
-     <link href="https://fonts.googleapis.com/icon?family=person_pin" rel="stylesheet">
-    
+    <!--typografia-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body id="phone">
-    <header>
+<body>
+<section class="container-fluid">
+    <header id="codigo">
         <div class="row">
-            <div class="col s2">
-                <a href="index.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <div class="col-sm-2 col-xs-2">
+               <a href="phone.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a> 
             </div>
-            <div class="col s8">
-                <h1 class="center-align">Sign up</h1>
+            <div class="col-sm-8 col-xs-8 text-center"> 
+                <h1 class="center-align h1-signup">Sign Up</h1>
                 <p class="center-align">Join now for free ride credit</p>
             </div>
             <hr>
         </div>
     </header>
- 
-<div class="form-group">
-      <div class="col s12">
-        <label class="form-control" type="first_name" id="first_name" name="first" data-validation="first_name"  placeholder="First Name">
+</section>
 
-
-    <div class="input-field col s6 align-center" >
-          <label for="first_name" class="first_name"></label>
-            <input type="text" id="first_name" class="first_name"
-            placeholder="First Name">
-          </div>
-      
-    </div>
-       
-    <div class="input-field col s6 align-center" >
-          <label for="last_name" class="last_name"></label>
-            <input type="text" id="last_name" class="last_name"
-            placeholder="Last Name">
-          </div>
-      
-    </div>
-
-    <div class="form-group">
-
-    
-    <div class="input-field col s6 align-center" >
-          <label for="email" class="email"></label>
-            <input type="text" id="email" class="email"
-            placeholder="Email">
-          </div>
-      
-    </div>
-    </div>
-       <div class="row">
-       <div class="text-under">
-         <p class="terminos">
-        <input type="checkbox" class="terminos"/>
-          <label for="filled-in-box" class="darker">I agree to Lyft's <a href="#">Terms of Service</a></label>
-                    </p>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+               <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-user-circle-o fa-fw"></i></span>
+                    <input class="form-control" type="text" id="nombre-signup" placeholder="First Name">
                 </div>
-            </form>
+            </div>
+            <br><br>
+            <div class="col-sm-12 col-xs-12 mb-15">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                    <input class="form-control" type="text" id="email-signup" placeholder="Email address">
+                </div>
+            </div>
         </div>
-      </section>
-        <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit" id="btn">Next</button>
-      </div>
+
+        <!-- Espacio donde aparecera mensaje de error -->
+        <div class="col-sm-12 col-xs-12 text-center" id="espacio-error-nombre"></div>
+
+        <div class="checkbox div-checkbox">
+            <label>
+                <input id="checkbox-verify" type="checkbox"> I agree to Lyft's <a href="#">Terms of Service</a>
+            </label>
+        </div>
     </div>
-
-  </form> 
+    <div class="col-sm-12 col-xs-12" id="btn-guardar-padre">
+        <a href="#" class="btn-verify" id="btn-guardar-datos">NEXT</a>
+    </div>
+</section>
+<!--  
+<div class="container-fluid">
+    <div class="col-sm-12 col-xs-12">
+        <a href="phone2.html" class="btn-verify" id="btn-save">NEXT</a>
+    </div>
 </div>
+-->
 
-    </section>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>-->
     <!-- Iconos -->
     <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
     <!-- Archivo main.js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    
 </body>
 </html>

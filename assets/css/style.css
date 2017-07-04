@@ -272,8 +272,23 @@ body#phone .input-field label:after {
 
 /* .........FIN seccion phone2.html.......... */
 
-#btn{
-    background-color: #ff00ba ;
+
+/*.....INICIO .seccion signup.html .....*/
+.div-checkbox{
+    position: fixed;
+    bottom: 80px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.red{
+    color: red;
+}
+
+#btn-guardar-datos{
+    background-color: #ff00ba;
     color: #fff;
     width: 100%;
     margin-left:0;
@@ -283,7 +298,14 @@ body#phone .input-field label:after {
     text-align:center;
     position: fixed;
     bottom: 0;
-    text-transform: capitalize;
-    height: auto;
-    font-size: 1.8rem;
+    text-decoration: none;
+    margin-left: -16px;
 }
+
+#codigo .h1-signup{
+    font-size: 2rem;
+    margin: 0.7rem;
+    font-weight: 700;
+}
+
+/*.......FIN.seccion signup.html .....*/
