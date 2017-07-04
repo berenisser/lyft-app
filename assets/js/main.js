@@ -103,7 +103,7 @@ $(document).ready(function() {
             return false;
         }else{
             //location.href = 'phone.html';
-            window.open('phone.html','_self',false);
+            window.open('datos.html','_self',false);
         }
     });
   
@@ -157,11 +157,14 @@ $(document).ready(function() {
     })
 
     //Seccion de imprimir el nombre guardado en localStorage
-    /*var nom = localStorage.getItem('nombres').toUpperCase();
-    $('#espacio-nombre').html(nom);
-
-    $("#perfil-correo").html();
-    $("#perfil-fono").html();*/
+    var nom = localStorage.getItem('name');
+    $('#espacio-nombre-profile').html(nom);
+    $("#espacio-nombre-modal").html(nom);
+    //Seccion obtener e imprimir correo y numero de telefono
+    var correoElec = localStorage.getItem('email');
+    var fonoProfile = localStorage.getItem('phone');
+    $("#perfil-correo").html(correoElec);
+    $("#perfil-fono").html(fonoProfile);
   
     $('#files').on('click', function(){
 
@@ -187,4 +190,64 @@ $(document).ready(function() {
       
     // FIN Seccion profile.html
     
+    });
 });
+
+   //Seccion Sign Up obtener Nombre y correo
+$(document).ready(function(){
+    $("#btn-guardar-padre").on("click", $("#btn-guardar-datos"), function(e) {
+
+        $(".red").remove();
+
+        if(nombre()){
+            if(correo()){
+                if(seleccion()){
+                    window.open('profile.html','_self',false);
+                }
+            }
+        }
+    });
+
+    //validación nombre
+    function nombre(){
+        var nameValue = $("#nombre-signup").val();
+        console.log(nameValue);
+        if (!(/^[A-Z][a-z]{3,19}$/).test(nameValue)){
+            $("#espacio-error-nombre").append('<p class="red">Invalid name </p>');
+            $("#nombre-signup").val("");
+            console.log("primera");
+            return false;
+        }else{
+            localStorage.setItem('name',nameValue);
+            return true;
+        }
+    }
+
+    //validacion correo 
+    function correo(){
+        var emailValue = $("#email-signup").val();
+        console.log(emailValue);
+        if (!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/).test(emailValue)){
+            $("#espacio-error-nombre").append('<p class="red">Invalid email</p>');
+            $("#email-signup").val("");
+            console.log("segunda");
+            return false;
+        } else{
+            localStorage.setItem('email',emailValue);
+            return true;
+        }
+    }
+
+    function seleccion(){
+        if (! $('#checkbox-verify')[0].checked){
+            console.log("tercera");
+            $("#espacio-error-nombre").append('<p  class="red">You must agree to the terms</p>');
+           return false;
+        } else{
+            return true;
+        }
+    }
+
+});
+
+// FIN Seccion Sign Up obtener Nombre y correo
