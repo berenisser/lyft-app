@@ -348,7 +348,7 @@ $(document).ready(function(){
         if(nombre()){
             if(correo()){
                 if(seleccion()){
-                    window.open('profile.html','_self',false);
+                    window.open('map.html','_self',false);
                 }
             }
         }

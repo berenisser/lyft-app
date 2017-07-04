@@ -14,46 +14,36 @@ body{
 }
 
 /*inicio css map*/
-/************NAV**************/
-nav{
-  position: absolute;
-}
-
-.drive{
-  background-color: #727B99;
-}
-
-/********** FIN NAV **********/
-#logo{
+#map-container #logo{
   width: 60px;
   position: absolute;
   z-index: 1000;
   margin-top:10px;
 }
 
-#map a .fa:before{
+#map-container #map a .fa:before{
   color: black;
   z-index: 1000;
   position: relative;
 }
 
-#map{
+#map-container #map{
   width: 100%;
   height: 732px;
   position: absolute;
 }
 
-.botones{
+#map-container .botones{
   position: relative;
 }
 
-.botones::placeholder, label{
+#map-container .botones::placeholder, label{
   color: black;
   font-size: 0.8em;
   padding-left: 20px;
 }
 
-#ruta{
+#map-container #ruta{
   background-color: #8763ab;
   width: 100%;
   height: 60px;
@@ -61,7 +51,7 @@ nav{
     font-size: 20px;
 }
 
-#destino, #origen {
+#map-container #destino, #map-container #origen {
 
   background-color: white;
   margin-bottom: 0px;
@@ -70,15 +60,15 @@ nav{
   font-size: 20px;
 }
 
-#origen{
+#map-container #origen{
   margin-top:0px;
 }
 
-label {
+#map-container label {
   margin-top: 10px;
 }
 
-.contenedor-botones {
+#map-container .contenedor-botones {
   padding: 0;
   padding-left: 15px;
   border-radius: 15px;
@@ -88,15 +78,15 @@ label {
   min-width: 380px;
 }
 
-#location{
+#map-container #location{
     margin-top: 350px;
 }
 
-#arrow{
+#map-container #arrow{
   margin-bottom:0px;
 }
 
-.fa {
+#map-container .fa {
   border-radius: 50%;
   padding:10px;
   background: white;
@@ -106,14 +96,14 @@ label {
   color:black;
 }
 
-.icon-map {
+#map-container .icon-map {
   text-align: center;
   font-size: 1.8em;
   position: relative;
   color: black;
 }
 
-.contenedor-iconos {
+#map-container .contenedor-iconos {
   position: absolute;
 }
 

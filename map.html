@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!--zoom desde mobile-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>map</title>
+    <title>Lyft App</title>
     <!--typografia-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
     <!--Import Google Icon Font-->
@@ -51,59 +51,58 @@
 <!-- FIN SIDENAV -->
 
 <!--inicio map-->
-    <section class="container">
+<section id="map-container" class="container">
+    <div class="row">
+        <div class="col s12" id="map"></div>
+        <!-- Aqui ira nuestro mapa -->
         <div class="row">
-            <div class="col s12" id="map"></div>
-                <!-- Aqui ira nuestro mapa -->
-                    <div class="row">
-                        <div class="col s12 contenedor-iconos">
-                            <div class=" col offset-s4 col s4" >
-                               <img src="assets/img/Lyft_logo.svg.png" id="logo">
-                            </div>
-                            <div class="col s4 icon-map">
-                               <a href="#" id="icon"><i class="fa fa-gift icono" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                          <div class="container" id="location">
-                                <div class="row" id="arrow">
-                                    <div class="col s4 col offset-s8 icon-map" id="encuentrame">
-                                        <a href="#" id="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                          </div>
-                            <div class="contenedor-botones">
-                                <div class="row">
-                                    <div class="col s12">
-                                        <label for="origen" class="botones">Origen:</label>
-                                            <input type="text" id="origen" name="origen" placeholder="Introduce una ubicación" class="botones">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col s12">
-                                        <label for="origen" class="botones">Destino:</label>
-                                             <input type="text" placeholder="Enter your direction"  class="botones" id="destino">
-                                    </div>
-                                </div>
-                                     <div class="row">
-                                         <div class="col s12">
-                                        <a class="waves-effect waves-light btn btn-large" class="botones" id="ruta">Set pickup</a>
-                                         </div>
-                                      </div>
-                            </div>
+            <div class="col s12 contenedor-iconos">
+                <div class=" col offset-s4 col s4" >
+                 <img src="assets/img/Lyft_logo.svg.png" id="logo">
+             </div>
+             <div class="col s4 icon-map">
+                 <a href="#" id="icon"><i class="fa fa-gift icono" aria-hidden="true"></i></a>
+             </div>
+         </div>
+     </div>
+     <div class="container" id="location">
+        <div class="row" id="arrow">
+            <div class="col s4 col offset-s8 icon-map" id="encuentrame">
+                <a href="#" id="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></a>
+            </div>
         </div>
-    </section>
-    <!--inicio map-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--MAPA-->
-    <!-- Latest compiled and minified JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <!-- Tu Archivo main.js -->
-    <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7iRWsEdjy-msBF7lLcWNfc4_334Q4Fy8&callback=initMap&libraries=places"></script>
-    
+    </div>
+    <div class="contenedor-botones">
+        <div class="row">
+            <div class="col s12">
+                <label for="origen" class="botones">Origen:</label>
+                <input type="text" id="origen" name="origen" placeholder="Introduce una ubicación" class="botones">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <label for="origen" class="botones">Destino:</label>
+                <input type="text" placeholder="Enter your direction"  class="botones" id="destino">
+            </div>
+        </div>
+        <div class="row">
+           <div class="col s12">
+            <a class="waves-effect waves-light btn btn-large" class="botones" id="ruta">Set pickup</a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!--inicio map-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--MAPA-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<!-- Tu Archivo main.js -->
+<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7iRWsEdjy-msBF7lLcWNfc4_334Q4Fy8&callback=initMap&libraries=places"></script>
 </body>
 </html>
 
