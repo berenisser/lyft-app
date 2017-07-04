@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lyft App</title>
+        <!--zoom desde mobile-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--typografia-->
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<!-- sidenav -->
+<nav class="transparent z-depth-0">
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu<!--person_pin--></i></a>
+        <ul class="side-nav" id="mobile-demo">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="assets/img/Material-Design-Wallpapers.png" class="responsive-img">
+                    </div>
+                    <a href="#!user"><img class="circle responsive-img" src="assets/img/user-icon.jpg"></a>
+                    <a href="#!name"><span id="espacio-nombre-modal" class="white-text name"></span></a>
+                    <a href="profile.html"><span class="white-text email">View profile</span></a>
+                </div>
+            </li>
+            <li><a href="index.html"><i class="material-icons">language</i>Home</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="pink-text"><i class="pink-text material-icons">redeem</i>Free Rides</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!"><i class="material-icons">restore</i>Ride History</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!"><i class="material-icons">credit_card</i>Payment</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!"><i class="material-icons">live_help</i>Help</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="white-text drive"><i class="material-icons white-text">settings_input_svideo</i>Sign up to drive</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- FIN SIDENAV -->
+    <section class="profile-foto">
+        <div class="imagen row">
+          <div class="col s12">
+            <form action="#" class="imagen-cambio">
+                <div class="file-field input-field">
+                     <div class="btn">
+                       <span>Edit Profile</span>
+                       <input type="file" id="files"/>
+                  </div>
+                </div>
+            </form>
+            <div id="cambio">
+                <img class="img-profile" src="assets/img/profile.jpg" alt="perfil">
+            </div> 
+          </div>
+        </div>
+    </section>
+
+    <section class="profile-info">
+        <div class="container">        
+            <div class="row">
+                <div class="col s8 offset-s2 name-profile">
+                    <!-- Aqui se escribira el nombre -->
+                    <div class="Nombre" id="espacio-nombre-profile"></div>
+                    <h6 class="h6-profile">JOINED SEPTEMBER 2017</h6 class="h6-profile">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <ul>
+                        <li>
+                            <div>
+                               <i class="material-icons">home</i>
+                               <span class="homeP" id="homeP">From the best city ever</span> 
+                               <a href="#" class="btn-enlace1 right">Edit</a>
+                            </div>
+                            <div class="input1  input-profile">
+                               <input class="home-profile" id="home-profile" type="text" placeholder="Home">
+                               <button class=" btn btn-input btn-profile btn-guardar" id="btn-guardar">Save</button>
+                               <button class="btn btn-input btn-profile btn-cancel">Cancel</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">queue_music</i>
+                               <span class="musicP" id="musicP">Favorite music</span> 
+                               <a href="#" class="btn-enlace2 right">Edit</a>
+                            </div>
+                            <div class="input2 input-profile">
+                               <input class="music-profile" id="music-profile" type="text" placeholder="Music">
+                               <button class=" btn btn-input btn-guardar btn-profile" id="btn-guardar">Save</button>
+                               <button class="btn btn-input btn-profile btn-cancel">Cancel</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">perm_identity</i>
+                               <span class="placeP" id="placeP">I'm going places</span>
+                               <a href="#" class="btn-enlace3 right">Edit</a>
+                            </div>
+                            <div class="input3 input-profile">
+                               <input class="place-profile" id="place-profile" type="text" placeholder="Places">
+                               <button class=" btn btn-input btn-guardar btn-profile" id="btn-guardar">Save</button>
+                               <button class="btn btn-input btn-profile btn-cancel">Cancel</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">email</i>
+                               <span class="correoP" id="perfil-correo"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                               <i class="material-icons">phone</i>
+                               <span class="fonoP" id="perfil-fono"></span>
+                            </div>
+                        </li>
+                    <!-- <li><i class="fa fa-home" aria-hidden="true"></i> From the best city ever</li>
+                       <li><i class="fa fa-music" aria-hidden="true"></i> Favorite music is whatever matches my mood</li>
+                       <li><i class="fa fa-user" aria-hidden="true"></i> I'm going places</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <!-- Iconos -->
+    <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+    <!-- Archivo main.js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

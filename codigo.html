@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map</title>
+    <title>Lyft App</title>
         <!--zoom desde mobile-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--typografia-->
@@ -13,33 +13,39 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-<!--section map-->
-<!--google api-->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArj2T_nHsx0ZjqTJfME7iZuIvmf3pQhCM&callback=initMap&libraries=places"
-  type="text/javascript"></script>
-    <section id="intro">
+    <header id="codigo">
+        <div class="row">
+            <div class="col s2">
+               <a href="phone.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a> 
+            </div>
+            <div class="col s8"> 
+                <h1 class="center-align">This is Your Code</h1>
+                <p class="center-align">Copy this code and enter it in the next Section</p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    
+    <section id="codigo">
         <div class="container">
             <div class="row">
-                <div class="col s4 offset-s4">
-                    <img class="logo-white" src="assets/img/logo-white.png" alt="">
+                <div class="col s12 center-align">  
+                    <span>LAB-</span>
+                    <span id="imprimir-codigo"></span>
                 </div>
             </div>
-            <div class="row botones-intro">
-                 <div class="col s12">
-                     <div class="col s6">
-                         <a class="waves-effect btn-large boton-vacio">Log in</a>
-                     </div>
-                     <div class="col s6">
-                         <a href="phone.html" class="waves-effect btn-large boton-inicio">Sign up</a>
-                     </div>
-                 </div>
-            </div>
+        </div>
+        <div class="col s12">
+            <a href="verificar.html" class="btn-verify" id="btn-save">NEXT</a>
         </div>
     </section>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <!-- Iconos -->
+    <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
     <!-- Archivo main.js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
